@@ -10,7 +10,8 @@ process CELLRANGER_RNA_COUNT {
     tuple val(meta), path(reads)
 
     output:
-    tuple val(meta), path("**/outs/**")
+    tuple val(meta), path("${meta.id}"), emit: cellranger_dir
+    tuple val(meta), path("**/outs/raw_feature_bc_matrix.h5"), emit: raw_h5
 
     script:
     def prefix = task.ext.prefix ?: "${meta.id}"

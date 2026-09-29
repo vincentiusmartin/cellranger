@@ -1,7 +1,7 @@
 library(tidyverse)
 library(data.table)
 
-datadir <- "/research_jude/rgs01_jude/groups/northcgrp/projects/northcgrp_hartwell/common/illumina/northcgrp_874000_10XsNucRNAseq-1"
+datadir <- "/research/groups/northcgrp/home/common/Vincentius/resources/dataset/pbmc_1k_v3_fastqs"
 allfiles <- list.files(datadir, pattern = "\\.gz$", recursive=TRUE, full.names=TRUE)
 
 df <- data.frame(fastq_file = allfiles) %>%
@@ -18,5 +18,5 @@ df <- data.frame(fastq_file = allfiles) %>%
   pivot_wider(names_from = type, values_from = fastq_file,values_fn = list) %>%
   unnest(cols = -sample) %>%
   dplyr::select(sample, starts_with("fastq"), starts_with("index"), everything())
-fwrite(df,"/home/vmartin/projects/pipeline/sc_workflow/cellranger/samplesheet.csv")
+fwrite(df,"/home/vmartin/projects/pipeline/cellranger/samplesheet.csv")
 

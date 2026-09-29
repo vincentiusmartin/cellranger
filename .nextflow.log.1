@@ -1,0 +1,121 @@
+Sep-22 15:48:02.071 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --input samplesheet.csv -resume
+Sep-22 15:48:02.167 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 23.10.0
+Sep-22 15:48:02.184 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/vmartin/.nextflow/plugins; core-plugins: nf-amazon@2.1.4,nf-azure@1.3.2,nf-cloudcache@0.3.0,nf-codecommit@0.1.5,nf-console@1.0.6,nf-ga4gh@1.1.0,nf-google@1.8.3,nf-tower@1.6.3,nf-wave@1.0.0
+Sep-22 15:48:02.193 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sep-22 15:48:02.193 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sep-22 15:48:02.196 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Sep-22 15:48:02.203 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Sep-22 15:48:02.249 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/nextflow.config
+Sep-22 15:48:02.250 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/nextflow.config
+Sep-22 15:48:02.270 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Sep-22 15:48:02.764 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Sep-22 15:48:02.777 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [sleepy_lorenz] DSL2 - revision: 8369f9db47
+Sep-22 15:48:02.778 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Sep-22 15:48:02.778 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Sep-22 15:48:02.785 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/vmartin/.nextflow/secrets/store.json
+Sep-22 15:48:02.788 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@7b122839] - activable => nextflow.secret.LocalSecretsProvider@7b122839
+Sep-22 15:48:02.844 [main] DEBUG nextflow.Session - Session UUID: 0750aaf2-29a2-497f-80a2-87db28a99bf6
+Sep-22 15:48:02.845 [main] DEBUG nextflow.Session - Run name: sleepy_lorenz
+Sep-22 15:48:02.845 [main] DEBUG nextflow.Session - Executor pool size: 8
+Sep-22 15:48:02.850 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Sep-22 15:48:02.853 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Sep-22 15:48:02.871 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 23.10.0 build 5889
+  Created: 15-10-2023 15:07 UTC (10:07 CDT)
+  System: Linux 4.18.0-553.42.1.el8_10.x86_64
+  Runtime: Groovy 3.0.19 on OpenJDK 64-Bit Server VM 20.0.2+9-78
+  Encoding: UTF-8 (ANSI_X3.4-1968)
+  Process: 3220068@noderome102 [10.220.17.2]
+  CPUs: 8 - Mem: 1003.4 GB (769.3 GB) - Swap: 16 GB (16 GB)
+Sep-22 15:48:02.908 [main] DEBUG nextflow.Session - Work-dir: /research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/work [gpfs]
+Sep-22 15:48:02.933 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Sep-22 15:48:02.940 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Sep-22 15:48:02.958 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Sep-22 15:48:02.965 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Sep-22 15:48:03.122 [main] DEBUG nextflow.Session - Session start
+Sep-22 15:48:03.377 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Sep-22 15:48:04.110 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name CELLRANGER_RNA_COUNT
+Sep-22 15:48:04.115 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sep-22 15:48:04.115 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-22 15:48:04.119 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Sep-22 15:48:04.124 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=1003.4 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Sep-22 15:48:04.126 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Sep-22 15:48:04.182 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_gpu_high` matches labels `process_gpu_high` for process with name CELLBENDER_REMOVEBG
+Sep-22 15:48:04.183 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sep-22 15:48:04.183 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-22 15:48:04.186 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_med` matches labels `process_med` for process with name VELOCYTO_RUN10X
+Sep-22 15:48:04.187 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sep-22 15:48:04.187 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-22 15:48:04.190 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_med` matches labels `process_med` for process with name DROPLET_QC
+Sep-22 15:48:04.191 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sep-22 15:48:04.191 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-22 15:48:04.205 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name MERGE_RESULTS
+Sep-22 15:48:04.206 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sep-22 15:48:04.206 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-22 15:48:04.208 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC, VELOCYTO_RUN10X, CELLRANGER_RNA_COUNT, DROPLET_QC, CELLRANGER_ATAC_COUNT, MULTIQC, CAT_FASTQ, MERGE_RESULTS, CELLBENDER_REMOVEBG
+Sep-22 15:48:04.208 [main] DEBUG nextflow.Session - Igniting dataflow network (6)
+Sep-22 15:48:04.213 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CELLRANGER_RNA_COUNT
+Sep-22 15:48:04.214 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > CELLBENDER_REMOVEBG
+Sep-22 15:48:04.214 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > VELOCYTO_RUN10X
+Sep-22 15:48:04.214 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > DROPLET_QC
+Sep-22 15:48:04.214 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MERGE_RESULTS
+Sep-22 15:48:04.214 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_3b61520c80ea0fd2: /research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/./modules/cellranger/rnacount.nf
+  Script_37a7dc86b6364cec: /research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/./modules/fastqc/multiqc.nf
+  Script_7a53aece0efa4c0f: /research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/./modules/velocyto/run10x.nf
+  Script_0f530d00b5288995: /research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/./modules/cellranger/ataccount.nf
+  Script_e736c06728473cc5: /research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/./modules/fastqc/fastqc.nf
+  Script_3d7da9040a61b1ee: /research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/./modules/cat/fastq.nf
+  Script_dd92456706f87d21: /research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/main.nf
+  Script_82617777e7c60d10: /research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/./modules/custom/mergeresults.nf
+  Script_3f13a77d76fd2636: /research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/./modules/cellbender/removebg.nf
+  Script_5050663aeb07d49c: /research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/./modules/dropletqc/dropletqc.nf
+Sep-22 15:48:04.214 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Sep-22 15:48:04.214 [main] DEBUG nextflow.Session - Session await
+Sep-22 15:48:04.882 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [f5/60b02f] Cached process > CELLRANGER_RNA_COUNT (pbmc_1k_v3)
+Sep-22 15:48:04.902 [Actor Thread 5] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Sep-22 15:48:04.904 [Actor Thread 5] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/research/groups/northcgrp/home/common/Rachel/envs/velocyto; path=/research/groups/northcgrp/home/common/Rachel/envs/velocyto
+Sep-22 15:48:04.904 [Actor Thread 9] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/research/groups/northcgrp/home/common/Rachel/envs/R_nf_4.3.1; path=/research/groups/northcgrp/home/common/Rachel/envs/R_nf_4.3.1
+Sep-22 15:48:04.904 [Actor Thread 7] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/research/groups/northcgrp/home/common/Rachel/envs/cellbender; path=/research/groups/northcgrp/home/common/Rachel/envs/cellbender
+Sep-22 15:48:04.908 [Actor Thread 1] INFO  nextflow.processor.TaskProcessor - [19/f51e1c] Cached process > CELLBENDER_REMOVEBG (pbmc_1k_v3)
+Sep-22 15:48:04.911 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [dd/910d91] Cached process > DROPLET_QC (pbmc_1k_v3)
+Sep-22 15:48:04.912 [Actor Thread 2] INFO  nextflow.processor.TaskProcessor - [ac/398085] Cached process > VELOCYTO_RUN10X (pbmc_1k_v3)
+Sep-22 15:48:04.921 [Actor Thread 2] DEBUG nextflow.conda.CondaCache - conda found local env for environment=/research/groups/northcgrp/home/common/Vincentius/envs/scmerge; path=/research/groups/northcgrp/home/common/Vincentius/envs/scmerge
+Sep-22 15:48:04.958 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-22 15:48:04.959 [Task submitter] INFO  nextflow.Session - [cd/e2ff6f] Submitted process > MERGE_RESULTS (merged_samples)
+Sep-22 15:48:10.320 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: MERGE_RESULTS (merged_samples); status: COMPLETED; exit: 1; error: -; workDir: /research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/work/cd/e2ff6fc6c8e55287e73dcf3708c8d0]
+Sep-22 15:48:10.323 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=MERGE_RESULTS (merged_samples); work-dir=/research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/work/cd/e2ff6fc6c8e55287e73dcf3708c8d0
+  error [nextflow.exception.ProcessFailedException]: Process `MERGE_RESULTS (merged_samples)` terminated with an error exit status (1)
+Sep-22 15:48:10.331 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'MERGE_RESULTS (merged_samples)'
+
+Caused by:
+  Process `MERGE_RESULTS (merged_samples)` terminated with an error exit status (1)
+
+Command executed:
+
+  mergeresults.py pbmc_1k_v3 cellbender_output.h5 pbmc_1k_v3.loom nf_ed_qc.csv
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+  Traceback (most recent call last):
+    File "/research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/bin/mergeresults.py", line 9, in <module>
+      from scvelo.utils import anndata_from_h5
+  ImportError: cannot import name 'anndata_from_h5' from 'scvelo.utils' (/research/groups/northcgrp/home/common/Vincentius/envs/scmerge/lib/python3.10/site-packages/scvelo/utils.py)
+
+Work dir:
+  /research/rgs01/home/clusterHome/vmartin/projects/pipeline/cellranger/work/cd/e2ff6fc6c8e55287e73dcf3708c8d0
+
+Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line
+Sep-22 15:48:10.334 [main] DEBUG nextflow.Session - Session await > all processes finished
+Sep-22 15:48:10.336 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Process `MERGE_RESULTS (merged_samples)` terminated with an error exit status (1)
+Sep-22 15:48:10.345 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Sep-22 15:48:10.346 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Sep-22 15:48:10.351 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=4; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=21.1s; cachedDuration=4h 34m 10s;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=4; peakMemory=16 GB; ]
+Sep-22 15:48:10.548 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Sep-22 15:48:10.621 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
