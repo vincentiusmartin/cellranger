@@ -2,9 +2,14 @@
 
 # Cellranger single cell RNA and ATAC Nextflow pipeline
 
-The pipeline performs automated data (fastq) processing using samplesheet of the file locations.
+This Nextflow workflow provides an automated pipeline for processing 10X Genomics single-cell RNA and ATAC data. For scRNA, it integrates several tools for complementary processing and quality-control steps:
 
-<center><img src="images/workflow.png" width=70% /></center>
+- <b>Cell Ranger</b> for read alignment and gene-expression quantification
+- <b>CellBender</b> for removal of ambient RNA contamination
+- <b>Velocyto</b> for quantification of spliced and unspliced transcripts for RNA velocity analysis
+- <b>DropletQC</b> for estimating nuclear fraction and identifying empty droplets
+
+<center><img src="images/workflow.png" width=100% /></center>
 
 <details><summary><b>Table of content</b></summary>
 
