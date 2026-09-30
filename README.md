@@ -36,7 +36,7 @@ The pipeline accepts a samplesheet containing paths to the input files. An examp
 An example script for generating the samplesheet is provided in the `scripts` directory.
 
 | sample | fastq1 | fastq2 | index1 | 
-| --- | --- | --- | --- | --- |  --- |
+| --- | --- | --- | --- | 
 | sample1 | /path/to/sample1_L001_R1.fastq.gz | /path/to/sample1_L001_R2.fastq.gz | /path/to/sample1_L001_I1.fastq.gz | 
 | sample1 | /path/to/sample1_L002_R1.fastq.gz | /path/to/sample1_L002_R2.fastq.gz | /path/to/sample1_L002_I1.fastq.gz | 
 | sample2 | /path/to/sample2_L001_R1.fastq.gz | /path/to/sample2_L001_R2.fastq.gz | /path/to/sample2_L001_I1.fastq.gz | 
